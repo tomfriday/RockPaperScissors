@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>kamien papier nozyce</title>
+</head>
+
+<body>
+    <div class="container text-center">
+        <h3 class="text center">
+            Welcome to the game
+            <span class="label label-default">Rock</span>
+            <span class="label label-info">Paper</span>
+            <span class="label label-danger">Scissors</span>
+        </h3>
+    </div>
+    <div id="js-newGameElement" class="container ">
+        <div class="row text-center">
+            <button id="js-newGameButton" class="btn btn-default">
+            New Game 
+            </button>
+        </div>
+    </div>
+    <div id="js-PlayerChoice" class="container text-center">
+        <div class="row text-center">
+            <button type="button" class="btn " id="playerPicksScissors">Scissors <span class="badge"><i class="fa fa-scissors" aria-hidden="true"></i></span></button>
+            <button type="button" class="btn " id="playerPicksRock">Rock <span class="badge"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span></button>
+            <button type="button" class="btn " id="playerPicksPaper">Paper <span class="badge"><i class="fa fa-hand-rock-o" aria-hidden="true"></i></span></button>
+        </div>
+    </div>
+
+    <div id="js-ScoreTable" class="container text-center">
+        <div class="row">
+            <div class="col-xs-5 text-center">
+                <span id="js-playerPoints" class="badge">0</span>
+                <span id="js-playerName">Player name</span>
+            </div>
+            <div class="col-xs-2 text-center">
+                VS.
+            </div>
+            <div class="col-xs-5 text-center">
+                <span id="js-computerPoints" class="badge">0</span> Computer
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5" text-center>
+                <span id="js-playerPick">Player Selection</span>
+            </div>
+            <div class="col-xs-5 col-xs-offset-2">
+                <span id="js-computerPick">Computer Selection</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5" text-center>
+                <span id="js-playerScore">Player Score</span>
+            </div>
+            <div class="col-xs-5 col-xs-offset-2">
+                <span id="js-computerScore">Computer Score</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="https://use.fontawesome.com/1c0a7a2086.js"></script>
+</body>
+
+</html>
