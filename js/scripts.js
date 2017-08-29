@@ -8,23 +8,27 @@ var pickScissors = document.getElementById('playerPicksScissors');
 var pickRock = document.getElementById('playerPicksRock');
 var pickPaper = document.getElementById('playerPicksPaper');
 
-function transition() {
-    playerPoints.style.opacity = 1;
-    computerPoints.style.opacity = 1;
 
-}
+
+
+
 
 pickScissors.addEventListener('click', function () {
     playerPick('scissors');
-    transition();
+    playerPoints.className += 'fade';
+    computerPoints.className += 'fade';
 });
 pickRock.addEventListener('click', function () {
     playerPick('rock');
-    transition();
+    playerPoints.className += 'fade';
+    computerPoints.className += 'fade';
+
 });
 pickPaper.addEventListener('click', function () {
     playerPick('paper');
-    transition();
+    playerPoints.className += 'fade';
+    computerPoints.className += 'fade';
+
 });
 /* */
 var gameState = 'notStarted'; //started,ended
