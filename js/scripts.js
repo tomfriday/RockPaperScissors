@@ -8,14 +8,23 @@ var pickScissors = document.getElementById('playerPicksScissors');
 var pickRock = document.getElementById('playerPicksRock');
 var pickPaper = document.getElementById('playerPicksPaper');
 
+function transition() {
+    playerPoints.style.opacity = 1;
+    computerPoints.style.opacity = 1;
+
+}
+
 pickScissors.addEventListener('click', function () {
-    playerPick('scissors')
+    playerPick('scissors');
+    transition();
 });
 pickRock.addEventListener('click', function () {
-    playerPick('rock')
+    playerPick('rock');
+    transition();
 });
 pickPaper.addEventListener('click', function () {
-    playerPick('paper')
+    playerPick('paper');
+    transition();
 });
 /* */
 var gameState = 'notStarted'; //started,ended
@@ -123,17 +132,18 @@ function checkRoundWinner(playerPick, computerPick) {
     computerResultElem.className = "computer";
 }
 
+
+
 function playerPick(playerPick) {
     var computerPick = getComputerPick();
-
     playerPickElem.innerHTML = playerPick;
     computerPickElem.innerHTML = computerPick;
-
     checkRoundWinner(playerPick, computerPick);
 }
 /*TABLE*/
 var playerPoints = document.getElementById('js-playerPoints');
 var computerPoints = document.getElementById('js-computerPoints');
+
 
 
 function addPoints() {
