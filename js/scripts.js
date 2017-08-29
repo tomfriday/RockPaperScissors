@@ -110,14 +110,17 @@ function checkRoundWinner(playerPick, computerPick) {
     if (winnerIs == 'player') {
         playerResultElem.innerHTML = "Win!";
         player.score++;
+        addPoints();
     } else if (winnerIs == 'computer') {
         computerResultElem.innerHTML = "Win!";
         computer.score++;
+        addPoints();
     } else {
         playerResultElem.innerHTML = "Draw!";
         computerResultElem.innerHTML = "Draw!";
     }
-
+    playerResultElem.className = "player";
+    computerResultElem.className = "computer";
 }
 
 function playerPick(playerPick) {
@@ -127,4 +130,13 @@ function playerPick(playerPick) {
     computerPickElem.innerHTML = computerPick;
 
     checkRoundWinner(playerPick, computerPick);
+}
+/*TABLE*/
+var playerPoints = document.getElementById('js-playerPoints');
+var computerPoints = document.getElementById('js-computerPoints');
+
+
+function addPoints() {
+    playerPoints.innerHTML = player.score;
+    computerPoints.innerHTML = computer.score;
 }

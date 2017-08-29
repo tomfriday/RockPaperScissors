@@ -1,3 +1,11 @@
 .container {
     padding: 15px;
 }
+
+.computer,
+.player {
+    font-size: 26px;
+    color: red;
+}
+
+.
