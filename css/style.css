@@ -15,8 +15,3 @@
     font-size: 26px;
     opacity: 0.3;
 }
-
-.fade {
-    opacity: 1;
-    transition: opacity 2s ease;
-}
