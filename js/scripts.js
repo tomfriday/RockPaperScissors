@@ -1,6 +1,12 @@
 var startGame = document.getElementById('js-newGameButton');
 startGame.addEventListener('click', newGame);
 
+var computerWins = document.getElementById('js-computerWinner');
+var playerWins = document.getElementById('js-playerWinner');
+computerWins.style.display = 'none';
+playerWins.style.display = 'none';
+
+
 
 /* player choice */
 
@@ -8,27 +14,15 @@ var pickScissors = document.getElementById('playerPicksScissors');
 var pickRock = document.getElementById('playerPicksRock');
 var pickPaper = document.getElementById('playerPicksPaper');
 
-
-
-
-
-
 pickScissors.addEventListener('click', function () {
     playerPick('scissors');
-    playerPoints.className += 'fade';
-    computerPoints.className += 'fade';
 });
 pickRock.addEventListener('click', function () {
     playerPick('rock');
-    playerPoints.className += 'fade';
-    computerPoints.className += 'fade';
 
 });
 pickPaper.addEventListener('click', function () {
     playerPick('paper');
-    playerPoints.className += 'fade';
-    computerPoints.className += 'fade';
-
 });
 /* */
 var gameState = 'notStarted'; //started,ended
@@ -55,6 +49,9 @@ function setGameElements() {
             break;
         case 'ended':
             startGame.innerText = 'Jeszcze raz';
+            newGameElem.style.display = 'block';
+            playerChoiceElem.style.display = 'none';
+            scoreTableElem.style.display = 'none';
         case 'notStarted':
         default:
             newGameElem.style.display = 'block';
@@ -65,7 +62,7 @@ function setGameElements() {
 
 var playerNameElem = document.getElementById('js-playerName');
 var playerScoreElem = document.getElementById('js-playerScore');
-var ComputerScoreElem = document.getElementById('js-computerScore');
+var computerScoreElem = document.getElementById('js-computerScore');
 /*new game*/
 
 function newGame() {
@@ -153,4 +150,18 @@ var computerPoints = document.getElementById('js-computerPoints');
 function addPoints() {
     playerPoints.innerHTML = player.score;
     computerPoints.innerHTML = computer.score;
+    finishGame();
+}
+
+/* who wins? */
+console.log(playerPoints.innerText);
+
+function finishGame() {
+
+    if (playerPoints.innerText === '10') {
+        playerWins.style.display = 'inline-block';
+    } else if (computerPoints.innerText === '10') {
+        computerWins.style.display = 'inline-block';
+    }
+    setGameElements('ended');
 }
