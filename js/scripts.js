@@ -160,8 +160,12 @@ function finishGame() {
 
     if (playerPoints.innerText === '10') {
         playerWins.style.display = 'inline-block';
+        setGameElements('started');
+
     } else if (computerPoints.innerText === '10') {
         computerWins.style.display = 'inline-block';
+        setGameElements('started');
+
     }
-    setGameElements('ended');
+
 }
