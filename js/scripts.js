@@ -136,7 +136,7 @@ function playerPick(playerPick) {
 function assignPoints() {
     playerPoints.innerHTML = player.score;
     computerPoints.innerHTML = computer.score;
-    CheckIfFinishGame();
+    checkIfFinishGame();
 }
 
 function reset() {
