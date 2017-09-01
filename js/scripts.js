@@ -81,18 +81,14 @@ function newGame() {
     playerNameElem.innerHTML = player.name;
 }
 
-/* players choice */
 
-function playerPick(playerPick) {
-    console.log(playerPick);
-}
 /* computer choice */
 
 function getComputerPick() {
     var possiblePicks = ['rock', 'paper', 'scissors'];
     return possiblePicks[Math.floor(Math.random() * 3)];
 }
-
+/* players choice */
 function playerPick(playerPick) {
     var computerPick = getComputerPick();
     playerPickElem.innerHTML = playerPick;
@@ -152,7 +148,7 @@ function reset() {
 
 }
 /* who wins? */
-function CheckIfFinishGame() {
+function checkIfFinishGame() {
 
     if (player.score == 10 || computer.score == 10) {
 
