@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 .container {
     padding: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.computer,
+.player {
+    font-size: 26px;
+    color: red;
+}
+
+#js-playerPoints,
+#js-computerPoints {
+    font-size: 26px;
+    opacity: 0.3;
 }
